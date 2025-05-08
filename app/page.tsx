@@ -210,7 +210,8 @@ export default function Home() {
       
       setOrderResponse(data);
       // Payment is not completed yet, just move to processing state
-    } catch (err: any) {
+    } 
+    catch (err: any) {
       const errorMessage = err.message || 'An error occurred';
       logger.error('Order creation failed', { error: errorMessage });
       setError(errorMessage);
@@ -295,7 +296,7 @@ export default function Home() {
     // If we're in embedded checkout mode, just return the CrossmintEmbeddedCheckout component
     if (paymentCompleted) {
       // Show order confirmation screen
-  return (
+      return (
         <div className="flex flex-col items-center justify-start w-full px-8 py-10">
           <div className="flex flex-col items-center mb-8">
             <div className="w-24 h-24 rounded-full border-4 border-orange-400 flex items-center justify-center mb-6">
