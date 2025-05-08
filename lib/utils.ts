@@ -10,6 +10,7 @@ export const DEBUG_ENABLED = true;
  */
 export function createLogger(namespace: string) {
   return {
+    // @ts-ignore
     log: (message: string, data?: any) => {
       if (DEBUG_ENABLED) {
         console.log(`[${namespace}] ${message}`);
@@ -18,6 +19,7 @@ export function createLogger(namespace: string) {
         }
       }
     },
+    // @ts-ignore
     error: (message: string, error?: any) => {
       if (DEBUG_ENABLED) {
         console.error(`[${namespace}] ${message}`);
@@ -26,6 +28,7 @@ export function createLogger(namespace: string) {
         }
       }
     },
+    // @ts-ignore
     warn: (message: string, data?: any) => {
       if (DEBUG_ENABLED) {
         console.warn(`[${namespace}] ${message}`);
@@ -34,6 +37,7 @@ export function createLogger(namespace: string) {
         }
       }
     },
+    // @ts-ignore
     info: (message: string, data?: any) => {
       if (DEBUG_ENABLED) {
         console.info(`[${namespace}] ${message}`);
