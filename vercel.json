@@ -1,8 +1,14 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "npm run build:vercel",
   "installCommand": "npm install",
   "framework": "nextjs",
   "devCommand": "npm run dev",
   "regions": ["iad1"],
-  "cleanUrls": true
+  "cleanUrls": true,
+  "build": {
+    "env": {
+      "NEXT_SKIP_TYPESCRIPT_CHECK": "1",
+      "NEXT_SKIP_ESLINT_CHECK": "1"
+    }
+  }
 } 

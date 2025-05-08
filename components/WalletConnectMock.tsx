@@ -1,8 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-// @ts-ignore
-import { createLogger, isValidSolanaAddress } from '@/lib/utils';
+import { createLogger } from '@/lib/utils';
 
 const logger = createLogger('COMP:WalletConnectMock');
 
